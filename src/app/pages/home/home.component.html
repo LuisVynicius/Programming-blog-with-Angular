@@ -1,17 +1,12 @@
-<header>
-    <app-menu-bar></app-menu-bar>
-</header>
 <app-menu-title></app-menu-title>
 <div class="container__articles">
 
     <div class="articles__main">
-        <app-big-card photoCover="https://th.bing.com/th/id/OIP.J1TOxQXvvDq55Q3i_GJnMwHaFj?w=233&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" cardTitle="Novo Angular 24" cardDescription="Google anuncia que vai desenvolver uma nova versão do angular que rodará com Java"></app-big-card>
+        <app-big-card id="1" [photoCover]="fPhotoCover" [cardDescription]="fDescription" [cardTitle]="fTitle"></app-big-card>
     </div>
 
     <div class="articles__others">
-        <app-small-card photoCover="https://th.bing.com/th/id/OIP.615wYR7uHQvqfIlLzWGhNgHaFL?w=267&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7" cardTitle="Novo"></app-small-card>
-        <app-small-card></app-small-card>
-        <app-small-card></app-small-card>
+        <app-small-card *ngFor="let x of news.slice(1)" id="{{x.id}}" photoCover="{{x.photo}}" cardTitle="{{x.title}}"></app-small-card>
     </div>
 
 </div>
