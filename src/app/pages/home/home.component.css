@@ -5,6 +5,8 @@
     justify-content: center;
 }
 
-.articles__others {
-
+header {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
 }
